@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Artery</title>
+    <style>
+        :root {
+            --bg-color: #060B0C;
+            --surface-color: #0E1618;
+            --surface-elevated: #162427;
+            --accent-color: #94F0E8;
+            --accent-glow: rgba(148, 240, 232, 0.15);
+            --accent-dim: rgba(148, 240, 232, 0.05);
+            --text-primary: #DFE9E8;
+            --text-secondary: #7C9BA0;
+            --divider-color: rgba(29, 50, 54, 0.5);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 50% 0%, var(--accent-glow) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(22, 36, 39, 0.5) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Micro-animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 50px;
+            background: rgba(14, 22, 24, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--divider-color);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+        section:nth-child(7) { animation-delay: 0.6s; }
+        section:nth-child(8) { animation-delay: 0.7s; }
+        section:nth-child(9) { animation-delay: 0.8s; }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            opacity: 0.7;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--divider-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+            border-bottom-color: var(--accent-color);
+            text-shadow: 0 0 8px var(--accent-glow);
+        }
+
+        .highlight-box {
+            background: linear-gradient(90deg, var(--accent-dim) 0%, transparent 100%);
+            border-left: 4px solid var(--accent-color);
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 30px 0 40px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid var(--divider-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Artery - Privacy Policy</h1>
+        <div class="last-updated">Effective Date: June 21, 2026</div>
+    </header>
+
+    <section>
+        <p>Thank you for choosing Artery. We are committed to protecting your privacy and ensuring transparency about how your data is handled. This Privacy Policy explains our practices regarding data collection and usage within the Artery application.</p>
+        
+        <div class="highlight-box">
+            <p><strong>TL;DR:</strong> Artery is a local network traffic controller. We do <strong>not</strong> route your network traffic to remote servers, nor do we collect, log, or inspect your browsing activity.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>1. The VpnService and Network Traffic</h2>
+        <p>Artery utilizes Android's built-in <code>VpnService</code> to function. However, unlike traditional VPN applications, Artery does not establish a connection to a remote VPN server to hide your IP address or proxy your traffic over the internet.</p>
+        <ul>
+            <li><strong>Local Proxy Only:</strong> The VpnService is used strictly to create a local SOCKS5 proxy loopback on your device. This allows Artery to capture and selectively route network traffic for individual apps on a per-app basis.</li>
+            <li><strong>No Remote Routing:</strong> Your network traffic (such as websites visited, messages sent, or data downloaded) remains on your device or goes directly to its intended internet destination. It is <strong>never</strong> sent to servers controlled by Artery or its developer.</li>
+            <li><strong>No Traffic Logging:</strong> We do not log, inspect, modify, or store the contents of your network traffic.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Location Data (Wi-Fi SSID)</h2>
+        <p>Artery includes an "Auto-Trigger" feature that automatically starts or stops the VPN profile based on the Wi-Fi network you connect to.</p>
+        <ul>
+            <li>To reliably detect the name (SSID) of the Wi-Fi network you are connected to, Android requires the app to request the <strong>Location Permission</strong> (<code>ACCESS_FINE_LOCATION</code>) and <strong>Nearby Devices Permission</strong>.</li>
+            <li>This location data is processed <strong>strictly locally</strong> on your device.</li>
+            <li>We do <strong>not</strong> track your physical location, and we do <strong>not</strong> transmit your location data or Wi-Fi network names to any external servers.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Third-Party Services and Analytics</h2>
+        <p>To improve the application and support its development, we integrate the following third-party services:</p>
+        <ul>
+            <li><strong>Firebase Crashlytics & Analytics:</strong> We collect anonymous crash reports and basic usage statistics (such as how often features are used) to identify bugs and improve/optimise performance. This data does not contain personally identifiable information. For more details on how Firebase handles data, please review the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security Guidelines</a> and the <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase policy</a>.</li>
+            <li><strong>Google AdMob:</strong> We use AdMob to serve advertisements within the app. AdMob may use device identifiers (such as the Android Advertising ID) to provide personalized ads. You can manage your ad preferences or opt-out of personalized advertising through your Android device settings. For more information, please review how Google uses data in advertising <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">here</a> and the <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob Policies</a>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Local Configuration Data</h2>
+        <p>Your app settings, including which apps are selected for routing and your Wi-Fi trigger configurations, are saved locally in a database on your device. This data is not synced or uploaded to the cloud.</p>
+    </section>
+
+    <section>
+        <h2>5. Data Retention and Deletion</h2>
+        <p>Because all configuration data is stored locally on your device, you can delete all your data simply by clearing the app's data in your Android settings or uninstalling the app. We do not maintain user accounts or store personal data on remote servers.</p>
+    </section>
+
+    <section>
+        <h2>6. Children's Privacy</h2>
+        <p>Artery is an advanced networking utility and is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you are under 13, please do not use this application.</p>
+    </section>
+
+    <section>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top.</p>
+    </section>
+
+    <section>
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:legendsayantandev@gmail.com">legendsayantandev@gmail.com</a></p>
+    </section>
+
+    <footer>
+        &copy; 2026 Sayantan. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
